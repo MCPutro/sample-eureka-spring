@@ -1,0 +1,43 @@
+
+server:
+  port: 8888
+
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  client:
+    service-url:
+      default-zone: "http://localhost:8761/eureka/"
+    register-with-eureka: true
+    fetch-registry: true
+
+##    jika di config lewat properties
+#    spring.cloud.gateway.routes[0].id=client1-hello
+#    spring.cloud.gateway.routes[0].uri=lb://client1
+#    spring.cloud.gateway.routes[0].predicates[0]=Path=/hello1
+#
+#    spring.cloud.gateway.routes[1].id=client1-c1
+#    spring.cloud.gateway.routes[1].uri=lb://client1
+#    spring.cloud.gateway.routes[1].predicates[0]=Path=/c1
+#
+#    spring.cloud.gateway.routes[2].id=client1-users
+#    spring.cloud.gateway.routes[2].uri=lb://client1
+#    spring.cloud.gateway.routes[2].predicates[0]=Path=/users
+#
+#    spring.cloud.gateway.routes[3].id=client1-users-product
+#    spring.cloud.gateway.routes[3].uri=lb://client1
+#    spring.cloud.gateway.routes[3].predicates[0]=Path=/users/product
+#
+#    spring.cloud.gateway.routes[4].id=client2-c2
+#    spring.cloud.gateway.routes[4].uri=lb://client2
+#    spring.cloud.gateway.routes[4].predicates[0]=Path=/c2
+#
+#    spring.cloud.gateway.routes[5].id=client2-products
+#    spring.cloud.gateway.routes[5].uri=lb://client2
+#    spring.cloud.gateway.routes[5].predicates[0]=Path=/products
+#
+#    spring.cloud.gateway.routes[6].id=client2-hello
+#    spring.cloud.gateway.routes[6].uri=lb://client2
+#    spring.cloud.gateway.routes[6].predicates[0]=Path=/hello2
